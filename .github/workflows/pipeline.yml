@@ -18,8 +18,8 @@ jobs:
       - name: Obtener el codigo
         uses: actions/checkout@v6
 
-      - name: Simular build
-        run: echo "Construyendo la aplicacion..."
+      - name: Construir imagen Docker
+        run: docker build -t lab-github-actions:latest .
 
   test:
     name: Test
