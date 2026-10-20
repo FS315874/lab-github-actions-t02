@@ -21,13 +21,15 @@ jobs:
       - name: Simular build
         run: echo "Construyendo la aplicacion..."
 
-  test:
+    test:
     name: Test
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Simular tests
-        run: echo "Ejecutando pruebas..."
+      - name: Simular tests fallidos
+        run: |
+          echo "Ejecutando pruebas..."
+          exit 1
 
   deploy:
     name: Deploy
