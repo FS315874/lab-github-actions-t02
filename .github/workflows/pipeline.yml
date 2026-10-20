@@ -26,10 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Simular tests fallidos
+      - name: Simular tests
         run: |
           echo "Ejecutando pruebas..."
-          exit 1
 
   deploy:
     name: Deploy
